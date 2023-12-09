@@ -7,10 +7,10 @@ SRCS	=	ft_putnbr_fd.c ft_putstr_fd.c ft_printf.c
 OBJS	=	$(SRCS:.c=.o)
 CC	= 	cc
 RM	= 	rm -f
-LIBC	= 	ar -rcs
+LIBC	= 	ar rcs
 FLAGS	= 	-Wall -Wextra -Werror
 
-%.o : %.c ${HEADER} Makefile 
+%.o : %.c Makefile ${HEADER} 
 	${CC} ${FLAGS} -c $< -o $@
 
 $(NAME): ${OBJS} 
